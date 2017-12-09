@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'blur_Block_proc9'
+================================================================
+* Date:           Thu Nov 30 23:34:08 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        medium_maxi
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      4.38|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 1
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+* FSM state operations: 
+
+ <State 1>: 4.38ns
+ST_1: stg_2 [1/1] 0.00ns
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: stg_3 [1/1] 0.00ns
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_4 [1/1] 0.00ns
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: stg_5 [1/1] 0.00ns
+entry:3  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_6 [1/1] 0.00ns
+entry:4  call void (...)* @_ssdm_op_SpecInterface(i32* %image_in_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: image_out_read [1/1] 0.00ns
+entry:5  %image_out_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %image_out) nounwind
+
+ST_1: image_in_read [1/1] 0.00ns
+entry:6  %image_in_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %image_in) nounwind
+
+ST_1: stg_9 [1/1] 4.38ns
+entry:7  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %image_in_out, i32 %image_in_read) nounwind
+
+ST_1: stg_10 [1/1] 0.00ns
+entry:8  call void (...)* @_ssdm_op_SpecInterface(i32* %image_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_1: stg_11 [1/1] 4.38ns
+entry:9  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %image_out_out, i32 %image_out_read) nounwind
+
+ST_1: stg_12 [1/1] 0.00ns
+entry:10  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_13 [1/1] 0.00ns
+entry:11  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_14 [1/1] 0.00ns
+entry:12  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_15 [1/1] 0.00ns
+entry:13  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: stg_16 [1/1] 4.38ns
+entry:14  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %src_rows_V_out, i12 1080) nounwind
+
+ST_1: stg_17 [1/1] 4.38ns
+entry:15  call void @_ssdm_op_Write.ap_fifo.i12P(i12* %src_cols_V_out, i12 1920) nounwind
+
+ST_1: stg_18 [1/1] 0.00ns
+entry:16  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,276 @@
+
+
+================================================================
+== Vivado HLS Report for 'blur'
+================================================================
+* Date:           Thu Nov 30 23:34:09 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        medium_maxi
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+---------+---------+----------+
+    |  Latency  |      Interval     | Pipeline |
+    | min | max |   min   |   max   |   Type   |
+    +-----+-----+---------+---------+----------+
+    |    1|    1|  2083323|  2091276| dataflow |
+    +-----+-----+---------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 7
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 7, States = { 1 2 3 4 5 6 7 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+* FSM state operations: 
+
+ <State 1>: 5.38ns
+ST_1: image_out_read [1/1] 1.00ns
+codeRepl:0  %image_out_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %image_out)
+
+ST_1: image_in_read [1/1] 1.00ns
+codeRepl:1  %image_in_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %image_in)
+
+ST_1: image_out_channel [1/1] 0.00ns
+codeRepl:2  %image_out_channel = alloca i32, align 4
+
+ST_1: image_in_channel [1/1] 0.00ns
+codeRepl:3  %image_in_channel = alloca i32, align 4
+
+ST_1: src_cols_V_channel39 [1/1] 0.00ns
+codeRepl:5  %src_cols_V_channel39 = alloca i12, align 2
+
+ST_1: src_rows_V_channel38 [1/1] 0.00ns
+codeRepl:6  %src_rows_V_channel38 = alloca i12, align 2
+
+ST_1: src_cols_V_channel [1/1] 0.00ns
+codeRepl:7  %src_cols_V_channel = alloca i12, align 2
+
+ST_1: src_rows_V_channel [1/1] 0.00ns
+codeRepl:8  %src_rows_V_channel = alloca i12, align 2
+
+ST_1: src_data_stream_0_V [1/1] 0.00ns
+codeRepl:11  %src_data_stream_0_V = alloca i8, align 1
+
+ST_1: dst_data_stream_0_V [1/1] 0.00ns
+codeRepl:14  %dst_data_stream_0_V = alloca i8, align 1
+
+ST_1: stg_18 [1/1] 4.38ns
+codeRepl:28  call fastcc void @blur_Block__proc9(i12* %src_rows_V_channel, i12* %src_cols_V_channel, i32 %image_in_read, i32 %image_out_read, i32* %image_in_channel, i32* %image_out_channel) nounwind
+
+
+ <State 2>: 0.00ns
+ST_2: stg_19 [2/2] 0.00ns
+codeRepl:33  call fastcc void @blur_AXIM2Mat(i8* %CRTL_BUS, i32* nocapture %image_in_channel, i12* nocapture %src_rows_V_channel, i12* nocapture %src_cols_V_channel, i8* %src_data_stream_0_V, i12* %src_rows_V_channel38, i12* %src_cols_V_channel39)
+
+ST_2: call_ret [2/2] 0.00ns
+codeRepl:34  %call_ret = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8 } @blur_Loop_1_proc() nounwind
+
+
+ <State 3>: 0.00ns
+ST_3: stg_21 [1/2] 0.00ns
+codeRepl:33  call fastcc void @blur_AXIM2Mat(i8* %CRTL_BUS, i32* nocapture %image_in_channel, i12* nocapture %src_rows_V_channel, i12* nocapture %src_cols_V_channel, i8* %src_data_stream_0_V, i12* %src_rows_V_channel38, i12* %src_cols_V_channel39)
+
+ST_3: call_ret [1/2] 0.00ns
+codeRepl:34  %call_ret = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8 } @blur_Loop_1_proc() nounwind
+
+ST_3: kernel_val_0_0_channel [1/1] 0.00ns
+codeRepl:35  %kernel_val_0_0_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 0
+
+ST_3: kernel_val_0_1_channel [1/1] 0.00ns
+codeRepl:36  %kernel_val_0_1_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 1
+
+ST_3: kernel_val_0_2_channel [1/1] 0.00ns
+codeRepl:37  %kernel_val_0_2_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 2
+
+ST_3: kernel_val_1_0_channel [1/1] 0.00ns
+codeRepl:38  %kernel_val_1_0_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 3
+
+ST_3: kernel_val_1_1_channel [1/1] 0.00ns
+codeRepl:39  %kernel_val_1_1_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 4
+
+ST_3: kernel_val_1_2_channel [1/1] 0.00ns
+codeRepl:40  %kernel_val_1_2_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 5
+
+ST_3: kernel_val_2_0_channel [1/1] 0.00ns
+codeRepl:41  %kernel_val_2_0_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 6
+
+ST_3: kernel_val_2_1_channel [1/1] 0.00ns
+codeRepl:42  %kernel_val_2_1_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 7
+
+ST_3: kernel_val_2_2_channel [1/1] 0.00ns
+codeRepl:43  %kernel_val_2_2_channel = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret, 8
+
+
+ <State 4>: 0.00ns
+ST_4: stg_32 [2/2] 0.00ns
+codeRepl:44  call fastcc void @blur_Filter2D(i12* %src_rows_V_channel38, i12* %src_cols_V_channel39, i8* %src_data_stream_0_V, i8* %dst_data_stream_0_V, i8 %kernel_val_0_0_channel, i8 %kernel_val_0_1_channel, i8 %kernel_val_0_2_channel, i8 %kernel_val_1_0_channel, i8 %kernel_val_1_1_channel, i8 %kernel_val_1_2_channel, i8 %kernel_val_2_0_channel, i8 %kernel_val_2_1_channel, i8 %kernel_val_2_2_channel) nounwind
+
+
+ <State 5>: 0.00ns
+ST_5: stg_33 [1/2] 0.00ns
+codeRepl:44  call fastcc void @blur_Filter2D(i12* %src_rows_V_channel38, i12* %src_cols_V_channel39, i8* %src_data_stream_0_V, i8* %dst_data_stream_0_V, i8 %kernel_val_0_0_channel, i8 %kernel_val_0_1_channel, i8 %kernel_val_0_2_channel, i8 %kernel_val_1_0_channel, i8 %kernel_val_1_1_channel, i8 %kernel_val_1_2_channel, i8 %kernel_val_2_0_channel, i8 %kernel_val_2_1_channel, i8 %kernel_val_2_2_channel) nounwind
+
+
+ <State 6>: 0.00ns
+ST_6: stg_34 [2/2] 0.00ns
+codeRepl:45  call fastcc void @blur_Mat2AXIM(i8* %dst_data_stream_0_V, i8* %CRTL_BUS, i32* nocapture %image_out_channel)
+
+
+ <State 7>: 0.00ns
+ST_7: stg_35 [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i8* %CRTL_BUS), !map !10
+
+ST_7: stg_36 [1/1] 0.00ns
+codeRepl:9  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1808) nounwind
+
+ST_7: stg_37 [1/1] 0.00ns
+codeRepl:10  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @blur_str) nounwind
+
+ST_7: empty [1/1] 0.00ns
+codeRepl:12  %empty = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @src_OC_data_stream_LF_0_NF_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %src_data_stream_0_V, i8* %src_data_stream_0_V) nounwind
+
+ST_7: stg_39 [1/1] 0.00ns
+codeRepl:13  call void (...)* @_ssdm_op_SpecInterface(i8* %src_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_10 [1/1] 0.00ns
+codeRepl:15  %empty_10 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @dst_OC_data_stream_LF_0_NF_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 1, i8* %dst_data_stream_0_V, i8* %dst_data_stream_0_V) nounwind
+
+ST_7: stg_41 [1/1] 0.00ns
+codeRepl:16  call void (...)* @_ssdm_op_SpecInterface(i8* %dst_data_stream_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: stg_42 [1/1] 0.00ns
+codeRepl:17  call void (...)* @_ssdm_op_SpecInterface(i32 %image_out, [10 x i8]* @mode1, i32 0, i32 0, i32 0, i32 2073600, [1 x i8]* @bundle2, [6 x i8]* @p_str1807, [1 x i8]* @p_str1808, [1 x i8]* @p_str1808) nounwind
+
+ST_7: stg_43 [1/1] 0.00ns
+codeRepl:18  call void (...)* @_ssdm_op_SpecInterface(i8* %CRTL_BUS, [6 x i8]* @p_str1805, i32 0, i32 0, i32 0, i32 2073600, [9 x i8]* @p_str1806, [6 x i8]* @p_str1807, [1 x i8]* @p_str1808, [1 x i8]* @p_str1808) nounwind
+
+ST_7: stg_44 [1/1] 0.00ns
+codeRepl:19  call void (...)* @_ssdm_op_SpecInterface(i32 %image_in, [10 x i8]* @mode, i32 0, i32 0, i32 0, i32 2073600, [1 x i8]* @bundle, [6 x i8]* @p_str1807, [1 x i8]* @p_str1808, [1 x i8]* @p_str1808) nounwind
+
+ST_7: empty_11 [1/1] 0.00ns
+codeRepl:20  %empty_11 = call i32 (...)* @_ssdm_op_SpecChannel([19 x i8]* @src_OC_rows_OC_V_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i12* %src_rows_V_channel, i12* %src_rows_V_channel) nounwind
+
+ST_7: stg_46 [1/1] 0.00ns
+codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_12 [1/1] 0.00ns
+codeRepl:22  %empty_12 = call i32 (...)* @_ssdm_op_SpecChannel([19 x i8]* @src_OC_cols_OC_V_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i12* %src_cols_V_channel, i12* %src_cols_V_channel) nounwind
+
+ST_7: stg_48 [1/1] 0.00ns
+codeRepl:23  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_13 [1/1] 0.00ns
+codeRepl:24  %empty_13 = call i32 (...)* @_ssdm_op_SpecChannel([17 x i8]* @image_in_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %image_in_channel, i32* %image_in_channel)
+
+ST_7: stg_50 [1/1] 0.00ns
+codeRepl:25  call void (...)* @_ssdm_op_SpecInterface(i32* %image_in_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_14 [1/1] 0.00ns
+codeRepl:26  %empty_14 = call i32 (...)* @_ssdm_op_SpecChannel([18 x i8]* @image_out_channel_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 3, i32 0, i32* %image_out_channel, i32* %image_out_channel)
+
+ST_7: stg_52 [1/1] 0.00ns
+codeRepl:27  call void (...)* @_ssdm_op_SpecInterface(i32* %image_out_channel, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_15 [1/1] 0.00ns
+codeRepl:29  %empty_15 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @src_OC_rows_OC_V_channel38_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i12* %src_rows_V_channel38, i12* %src_rows_V_channel38) nounwind
+
+ST_7: stg_54 [1/1] 0.00ns
+codeRepl:30  call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_V_channel38, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: empty_16 [1/1] 0.00ns
+codeRepl:31  %empty_16 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @src_OC_cols_OC_V_channel39_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i12* %src_cols_V_channel39, i12* %src_cols_V_channel39) nounwind
+
+ST_7: stg_56 [1/1] 0.00ns
+codeRepl:32  call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_V_channel39, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_7: stg_57 [1/2] 0.00ns
+codeRepl:45  call fastcc void @blur_Mat2AXIM(i8* %dst_data_stream_0_V, i8* %CRTL_BUS, i32* nocapture %image_out_channel)
+
+ST_7: stg_58 [1/1] 0.00ns
+codeRepl:46  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

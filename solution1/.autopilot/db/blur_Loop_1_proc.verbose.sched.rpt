@@ -1,0 +1,349 @@
+
+
+================================================================
+== Vivado HLS Report for 'blur_Loop_1_proc'
+================================================================
+* Date:           Thu Nov 30 23:34:08 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        medium_maxi
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      4.11|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   25|   25|   25|   25|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   24|   24|         8|          -|          -|     3|    no    |
+        | + Loop 1.1  |    6|    6|         2|          -|          -|     3|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	2  / (exitcond)
+	4  / (!exitcond)
+4 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: kernel_val_2_2_s [1/1] 0.00ns
+newFuncRoot:0  %kernel_val_2_2_s = alloca i8
+
+ST_1: kernel_val_2_1_s [1/1] 0.00ns
+newFuncRoot:1  %kernel_val_2_1_s = alloca i8
+
+ST_1: kernel_val_0_0_s [1/1] 0.00ns
+newFuncRoot:2  %kernel_val_0_0_s = alloca i8
+
+ST_1: kernel_val_2_0_s [1/1] 0.00ns
+newFuncRoot:3  %kernel_val_2_0_s = alloca i8
+
+ST_1: kernel_val_1_2_s [1/1] 0.00ns
+newFuncRoot:4  %kernel_val_1_2_s = alloca i8
+
+ST_1: kernel_val_0_1_s [1/1] 0.00ns
+newFuncRoot:5  %kernel_val_0_1_s = alloca i8
+
+ST_1: kernel_val_1_1_s [1/1] 0.00ns
+newFuncRoot:6  %kernel_val_1_1_s = alloca i8
+
+ST_1: kernel_val_1_0_s [1/1] 0.00ns
+newFuncRoot:7  %kernel_val_1_0_s = alloca i8
+
+ST_1: kernel_val_0_2_s [1/1] 0.00ns
+newFuncRoot:8  %kernel_val_0_2_s = alloca i8
+
+ST_1: stg_14 [1/1] 1.57ns
+newFuncRoot:9  br label %.loopexit
+
+
+ <State 2>: 1.57ns
+ST_2: i [1/1] 0.00ns
+.loopexit:0  %i = phi i2 [ 0, %newFuncRoot ], [ %i_1, %.preheader ]
+
+ST_2: exitcond1 [1/1] 1.36ns
+.loopexit:1  %exitcond1 = icmp eq i2 %i, -1
+
+ST_2: empty [1/1] 0.00ns
+.loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_2: i_1 [1/1] 0.80ns
+.loopexit:3  %i_1 = add i2 %i, 1
+
+ST_2: stg_19 [1/1] 0.00ns
+.loopexit:4  br i1 %exitcond1, label %.exitStub, label %.preheader.preheader
+
+ST_2: tmp_cast [1/1] 0.00ns
+.preheader.preheader:0  %tmp_cast = zext i2 %i to i5
+
+ST_2: tmp_2 [1/1] 0.00ns
+.preheader.preheader:1  %tmp_2 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %i, i2 0)
+
+ST_2: p_shl_cast [1/1] 0.00ns
+.preheader.preheader:2  %p_shl_cast = zext i4 %tmp_2 to i5
+
+ST_2: tmp_3 [1/1] 0.80ns
+.preheader.preheader:3  %tmp_3 = sub i5 %p_shl_cast, %tmp_cast
+
+ST_2: stg_24 [1/1] 1.57ns
+.preheader.preheader:4  br label %.preheader
+
+ST_2: kernel_val_2_2_load [1/1] 0.00ns
+.exitStub:0  %kernel_val_2_2_load = load i8* %kernel_val_2_2_s
+
+ST_2: kernel_val_2_1_load [1/1] 0.00ns
+.exitStub:1  %kernel_val_2_1_load = load i8* %kernel_val_2_1_s
+
+ST_2: kernel_val_0_0_load [1/1] 0.00ns
+.exitStub:2  %kernel_val_0_0_load = load i8* %kernel_val_0_0_s
+
+ST_2: kernel_val_2_0_load [1/1] 0.00ns
+.exitStub:3  %kernel_val_2_0_load = load i8* %kernel_val_2_0_s
+
+ST_2: kernel_val_1_2_load [1/1] 0.00ns
+.exitStub:4  %kernel_val_1_2_load = load i8* %kernel_val_1_2_s
+
+ST_2: kernel_val_0_1_load [1/1] 0.00ns
+.exitStub:5  %kernel_val_0_1_load = load i8* %kernel_val_0_1_s
+
+ST_2: kernel_val_1_1_load [1/1] 0.00ns
+.exitStub:6  %kernel_val_1_1_load = load i8* %kernel_val_1_1_s
+
+ST_2: kernel_val_1_0_load [1/1] 0.00ns
+.exitStub:7  %kernel_val_1_0_load = load i8* %kernel_val_1_0_s
+
+ST_2: kernel_val_0_2_load [1/1] 0.00ns
+.exitStub:8  %kernel_val_0_2_load = load i8* %kernel_val_0_2_s
+
+ST_2: mrv [1/1] 0.00ns
+.exitStub:9  %mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %kernel_val_0_0_load, 0
+
+ST_2: mrv_1 [1/1] 0.00ns
+.exitStub:10  %mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %kernel_val_0_1_load, 1
+
+ST_2: mrv_2 [1/1] 0.00ns
+.exitStub:11  %mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %kernel_val_0_2_load, 2
+
+ST_2: mrv_3 [1/1] 0.00ns
+.exitStub:12  %mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %kernel_val_1_0_load, 3
+
+ST_2: mrv_4 [1/1] 0.00ns
+.exitStub:13  %mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %kernel_val_1_1_load, 4
+
+ST_2: mrv_5 [1/1] 0.00ns
+.exitStub:14  %mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %kernel_val_1_2_load, 5
+
+ST_2: mrv_6 [1/1] 0.00ns
+.exitStub:15  %mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %kernel_val_2_0_load, 6
+
+ST_2: mrv_7 [1/1] 0.00ns
+.exitStub:16  %mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %kernel_val_2_1_load, 7
+
+ST_2: mrv_8 [1/1] 0.00ns
+.exitStub:17  %mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %kernel_val_2_2_load, 8
+
+ST_2: stg_43 [1/1] 0.00ns
+.exitStub:18  ret { i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8
+
+
+ <State 3>: 4.11ns
+ST_3: j [1/1] 0.00ns
+.preheader:0  %j = phi i2 [ 0, %.preheader.preheader ], [ %j_1, %.preheader.backedge ]
+
+ST_3: exitcond [1/1] 1.36ns
+.preheader:1  %exitcond = icmp eq i2 %j, -1
+
+ST_3: empty_41 [1/1] 0.00ns
+.preheader:2  %empty_41 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_3: j_1 [1/1] 0.80ns
+.preheader:3  %j_1 = add i2 %j, 1
+
+ST_3: stg_48 [1/1] 0.00ns
+.preheader:4  br i1 %exitcond, label %.loopexit, label %0
+
+ST_3: tmp_cast_42 [1/1] 0.00ns
+:0  %tmp_cast_42 = zext i2 %j to i5
+
+ST_3: tmp_4 [1/1] 1.72ns
+:1  %tmp_4 = add i5 %tmp_3, %tmp_cast_42
+
+ST_3: tmp_4_cast [1/1] 0.00ns
+:2  %tmp_4_cast = sext i5 %tmp_4 to i64
+
+ST_3: coefficients_addr [1/1] 0.00ns
+:3  %coefficients_addr = getelementptr [9 x i3]* @coefficients, i64 0, i64 %tmp_4_cast
+
+ST_3: kernel_val_2_0 [2/2] 2.39ns
+:4  %kernel_val_2_0 = load i3* %coefficients_addr, align 1
+
+
+ <State 4>: 2.39ns
+ST_4: kernel_val_2_0 [1/2] 2.39ns
+:4  %kernel_val_2_0 = load i3* %coefficients_addr, align 1
+
+ST_4: kernel_val_2_0_cast [1/1] 0.00ns
+:5  %kernel_val_2_0_cast = sext i3 %kernel_val_2_0 to i8
+
+ST_4: stg_56 [1/1] 1.62ns
+:6  switch i2 %i, label %branch2 [
+    i2 0, label %branch0
+    i2 1, label %branch1
+  ]
+
+ST_4: stg_57 [1/1] 1.62ns
+branch1:0  switch i2 %j, label %branch8 [
+    i2 0, label %.preheader.backedge.pre
+    i2 1, label %branch7
+  ]
+
+ST_4: stg_58 [1/1] 0.00ns
+branch7:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_1_1_s
+
+ST_4: stg_59 [1/1] 0.00ns
+branch7:1  br label %.preheader.backedge
+
+ST_4: stg_60 [1/1] 0.00ns
+.preheader.backedge.pre:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_1_0_s
+
+ST_4: stg_61 [1/1] 0.00ns
+.preheader.backedge.pre:1  br label %.preheader.backedge
+
+ST_4: stg_62 [1/1] 0.00ns
+branch8:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_1_2_s
+
+ST_4: stg_63 [1/1] 0.00ns
+branch8:1  br label %.preheader.backedge
+
+ST_4: stg_64 [1/1] 1.62ns
+branch0:0  switch i2 %j, label %branch5 [
+    i2 0, label %.preheader.backedge.pre2
+    i2 1, label %branch4
+  ]
+
+ST_4: stg_65 [1/1] 0.00ns
+branch4:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_0_1_s
+
+ST_4: stg_66 [1/1] 0.00ns
+branch4:1  br label %.preheader.backedge
+
+ST_4: stg_67 [1/1] 0.00ns
+.preheader.backedge.pre2:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_0_0_s
+
+ST_4: stg_68 [1/1] 0.00ns
+.preheader.backedge.pre2:1  br label %.preheader.backedge
+
+ST_4: stg_69 [1/1] 0.00ns
+branch5:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_0_2_s
+
+ST_4: stg_70 [1/1] 0.00ns
+branch5:1  br label %.preheader.backedge
+
+ST_4: stg_71 [1/1] 1.62ns
+branch2:0  switch i2 %j, label %branch11 [
+    i2 0, label %.preheader.backedge.pre1
+    i2 1, label %branch10
+  ]
+
+ST_4: stg_72 [1/1] 0.00ns
+branch10:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_2_1_s
+
+ST_4: stg_73 [1/1] 0.00ns
+branch10:1  br label %.preheader.backedge
+
+ST_4: stg_74 [1/1] 0.00ns
+.preheader.backedge.pre1:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_2_0_s
+
+ST_4: stg_75 [1/1] 0.00ns
+.preheader.backedge.pre1:1  br label %.preheader.backedge
+
+ST_4: stg_76 [1/1] 0.00ns
+branch11:0  store i8 %kernel_val_2_0_cast, i8* %kernel_val_2_2_s
+
+ST_4: stg_77 [1/1] 0.00ns
+branch11:1  br label %.preheader.backedge
+
+ST_4: stg_78 [1/1] 0.00ns
+.preheader.backedge:0  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

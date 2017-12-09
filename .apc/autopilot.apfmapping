@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="core.cpp" path="/home/chathura/Desktop/medium_maxi/core.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.jpg" path="/home/chathura/Desktop/medium_maxi/test.jpg"/>
+    <originFiles name="test.cpp" path="/home/chathura/Desktop/medium_maxi/test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

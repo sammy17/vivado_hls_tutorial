@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SYN-103] Legalizing function name 'blur_Block__proc9' to 'blur_Block_proc9'." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:08.315+0530" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf[0].val[5]' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_imgproc.h:378)." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:08.057+0530" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf[0].val[4]' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_imgproc.h:378)." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:07.494+0530" type="Warning"/>
+        <logs message="@W [ANALYSIS-52] Setting false inter dependency for variable 'k_buf[0].val[3]' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_imgproc.h:378)." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:07.485+0530" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Array2Mat&lt;1920, unsigned char, 1080, 1920, 0>' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_io.h:174:46) into Array2Mat." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.822+0530" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::AXIM2Mat&lt;1920, unsigned char, 1080, 1920, 0>' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_io.h:206:9) into AXIM2Mat." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.677+0530" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Mat2Array&lt;1920, unsigned char, 1080, 1920, 0>' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_io.h:240:46) into Mat2Array." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.639+0530" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Mat2AXIM&lt;1920, unsigned char, 1080, 1920, 0>' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_io.h:273:9) into Mat2AXIM." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.614+0530" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'hls::Filter2D&lt;0, 0, char, int, 1080, 1920, 3, 3>' (/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_imgproc.h:118:33) into Filter2D." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.568+0530" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop lower bound from 0 to 1080 for loop 'loop_pixel' in function 'hls::Mat2Array&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.560+0530" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop lower bound from 0 to 1920 for loop 'Loop-0-0' in function 'hls::Mat2Array&lt;1920, unsigned char, 1080, 1920, 0>'." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:06.358+0530" type="Warning"/>
+        <logs message="@W [XFORM-732] An internal stream 'dst.data_stream[0].V' (medium_maxi/core.cpp:13) with default size is used in a non-dataflow region, which may result in deadlock. Please consider to resize the stream using the directive 'set_directive_stream'." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:04.476+0530" type="Warning"/>
+        <logs message="@W [XFORM-732] An internal stream 'src.data_stream[0].V' (medium_maxi/core.cpp:12) with default size is used in a non-dataflow region, which may result in deadlock. Please consider to resize the stream using the directive 'set_directive_stream'." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:04.414+0530" type="Warning"/>
+        <logs message="@W [XFORM-1103] Ignored data pack directive on non-struct variable 'src.data_stream.V' (medium_maxi/core.cpp:12)." projectName="medium_maxi" solutionName="solution1" date="2017-11-30T23:34:03.748+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

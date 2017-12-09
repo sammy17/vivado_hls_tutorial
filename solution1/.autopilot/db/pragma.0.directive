@@ -1,0 +1,25 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="blur" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="2073600"/>
+<option name="port" positionalBoolean="4" value="image_out"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="blur" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="2073600"/>
+<option name="port" positionalBoolean="4" value="image_in"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="CRTL_BUS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="blur" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

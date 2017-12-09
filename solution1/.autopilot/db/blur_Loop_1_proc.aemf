@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1512065050000">
+  <ports id="10" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="11" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="12" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="13" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="14" name="ap_return_4" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="15" name="ap_return_5" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="16" name="ap_return_6" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="17" name="ap_return_7" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="18" name="ap_return_8" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.18/@node_objs.2"/>
+  <edges id="108" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.18/@node_objs.3"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.18/@node_objs.4"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.18/@node_objs.5"/>
+  <edges id="111" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.18/@node_objs.6"/>
+  <edges id="112" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.18/@node_objs.7"/>
+  <edges id="113" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.18/@node_objs.8"/>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="137" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="139" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="142" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="145" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="150" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="152" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="154" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="156" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="158" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="168" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="171" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="175" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="184" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="189" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="191" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="192" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="196" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="201" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="204" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="206" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="208" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="211" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.14/@node_objs.0"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.14/@node_objs.1"/>
+  <edges id="218" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.16/@node_objs.0"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.16/@node_objs.1"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="222" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.15/@node_objs.0"/>
+  <edges id="225" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.15/@node_objs.1"/>
+  <edges id="227" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="229" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.18"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="243" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="244" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1"/>
+  <edges id="245" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="246" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.13"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.9"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="249" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.8"/>
+  <edges id="250" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
+  <edges id="251" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="252" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.17"/>
+  <edges id="253" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.17"/>
+  <edges id="254" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.17"/>
+  <edges id="255" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.12"/>
+  <edges id="256" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11"/>
+  <edges id="257" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.10"/>
+  <edges id="258" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.17"/>
+  <edges id="259" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.17"/>
+  <edges id="260" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.17"/>
+  <edges id="261" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.16"/>
+  <edges id="262" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.15"/>
+  <edges id="263" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.14"/>
+  <edges id="264" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.17"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.17"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.17"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.3"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.0"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.1"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.2"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.3"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.4"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.5"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.6"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.7"/>
+  <edges source_obj="//@blocks.18/@node_objs.9" sink_obj="//@ports.8"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.14/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.16/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.15/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.2" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.5" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.8" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.7" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.6" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.4" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.3" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.1" sink_obj="//@blocks.18/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.18/@node_objs.0" sink_obj="//@blocks.18/@node_objs.9"/>
+  <blocks id="12" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="kernel_val_2_2_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="kernel_val_2_1_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="kernel_val_0_0_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="kernel_val_2_0_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="kernel_val_1_2_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="kernel_val_0_1_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="kernel_val_1_1_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="kernel_val_1_0_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="kernel_val_0_2_s" bitwidth="8" opcode="alloca">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="node_11" lineNumber="17" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="17" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="18" name=".loopexit" type="BlockType">
+    <controlInputObjs>newFuncRoot</controlInputObjs>
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.exitStub</controlOutputObjs>
+    <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i" originalName="i" bitwidth="2" opcode="phi" nodeLabel="1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="exitcond1" lineNumber="17" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="exitcond1_fu_92_p2" contextFuncName="blur" bitwidth="1" opcode="icmp" nodeLabel="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="17" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_1" lineNumber="17" originalName="i" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="i_1_fu_98_p2" contextFuncName="blur" bitwidth="2" opcode="add" nodeLabel="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="17" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="node_17" lineNumber="17" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="17" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.exitStub</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="24" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_3" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="tmp_3_fu_120_p2" contextFuncName="blur" bitwidth="5" opcode="sub" nodeLabel="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="node_23" lineNumber="18" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="18" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>18</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="30" name=".preheader" type="BlockType">
+    <controlInputObjs>.preheader.preheader</controlInputObjs>
+    <controlInputObjs>.preheader.backedge</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <controlOutputObjs>block_38</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="j" originalName="j" bitwidth="2" opcode="phi" nodeLabel="2">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="exitcond" lineNumber="18" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="exitcond_fu_207_p2" contextFuncName="blur" bitwidth="1" opcode="icmp" nodeLabel="2">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="18" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="j_1" lineNumber="18" originalName="j" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="j_1_fu_213_p2" contextFuncName="blur" bitwidth="2" opcode="add" nodeLabel="2">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="18" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="node_29" lineNumber="18" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="2">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="18" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_38</controlInputObjs>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>18</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="block_38" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>branch2</controlOutputObjs>
+    <controlOutputObjs>branch0</controlOutputObjs>
+    <controlOutputObjs>branch1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="tmp_4" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." rtlName="tmp_4_fu_223_p2" contextFuncName="blur" bitwidth="5" opcode="add" nodeLabel="2">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="kernel_val_2_0" lineNumber="19" originalName="kernel.val[2][0]" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" bitwidth="3" opcode="load" nodeLabel="2" nodeLatency="1">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="node_37" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="switch" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>branch2</controlInputObjs>
+      <controlInputObjs>branch0</controlInputObjs>
+      <controlInputObjs>branch1</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="branch1" type="BlockType">
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>branch8</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge.pre</controlOutputObjs>
+    <controlOutputObjs>branch7</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="node_39" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="switch" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>branch8</controlInputObjs>
+      <controlInputObjs>.preheader.backedge.pre</controlInputObjs>
+      <controlInputObjs>branch7</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name="branch7" type="BlockType">
+    <controlInputObjs>branch1</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="node_41" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="node_42" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="46" name=".preheader.backedge.pre" type="BlockType">
+    <controlInputObjs>branch1</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="node_44" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="node_45" opcode="br" nodeLabel="3">
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="49" name="branch8" type="BlockType">
+    <controlInputObjs>branch1</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="node_47" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="node_48" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="51" name="branch0" type="BlockType">
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>branch5</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge.pre2</controlOutputObjs>
+    <controlOutputObjs>branch4</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="node_50" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="switch" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>branch5</controlInputObjs>
+      <controlInputObjs>.preheader.backedge.pre2</controlInputObjs>
+      <controlInputObjs>branch4</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="54" name="branch4" type="BlockType">
+    <controlInputObjs>branch0</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="node_52" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="node_53" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="57" name=".preheader.backedge.pre2" type="BlockType">
+    <controlInputObjs>branch0</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="node_55" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="node_56" opcode="br" nodeLabel="3">
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="60" name="branch5" type="BlockType">
+    <controlInputObjs>branch0</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="node_58" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="node_59" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="62" name="branch2" type="BlockType">
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>branch11</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge.pre1</controlOutputObjs>
+    <controlOutputObjs>branch10</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="node_61" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="switch" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>branch11</controlInputObjs>
+      <controlInputObjs>.preheader.backedge.pre1</controlInputObjs>
+      <controlInputObjs>branch10</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="65" name="branch10" type="BlockType">
+    <controlInputObjs>branch2</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="node_63" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="node_64" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="68" name=".preheader.backedge.pre1" type="BlockType">
+    <controlInputObjs>branch2</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="node_66" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="node_67" opcode="br" nodeLabel="3">
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="71" name="branch11" type="BlockType">
+    <controlInputObjs>branch2</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>.preheader.backedge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="node_69" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="store" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="node_70" lineNumber="19" fileName="medium_maxi/core.cpp" fileDirectory=".." contextFuncName="blur" opcode="br" nodeLabel="3">
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="19" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <controlInputObjs>.preheader.backedge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="73" name=".preheader.backedge" type="BlockType">
+    <controlInputObjs>branch7</controlInputObjs>
+    <controlInputObjs>.preheader.backedge.pre</controlInputObjs>
+    <controlInputObjs>branch8</controlInputObjs>
+    <controlInputObjs>branch4</controlInputObjs>
+    <controlInputObjs>.preheader.backedge.pre2</controlInputObjs>
+    <controlInputObjs>branch5</controlInputObjs>
+    <controlInputObjs>branch10</controlInputObjs>
+    <controlInputObjs>.preheader.backedge.pre1</controlInputObjs>
+    <controlInputObjs>branch11</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="node_72" opcode="br" nodeLabel="3">
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="93" name=".exitStub" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="kernel_val_2_2_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="kernel_val_2_1_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="kernel_val_0_0_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="kernel_val_2_0_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="kernel_val_1_2_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="kernel_val_0_1_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="kernel_val_1_1_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="kernel_val_1_0_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="kernel_val_0_2_load" bitwidth="8" opcode="load" nodeLabel="1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="node_92" opcode="ret" nodeLabel="1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+      <dataOutputObjs>ap_return_2</dataOutputObjs>
+      <dataOutputObjs>ap_return_3</dataOutputObjs>
+      <dataOutputObjs>ap_return_4</dataOutputObjs>
+      <dataOutputObjs>ap_return_5</dataOutputObjs>
+      <dataOutputObjs>ap_return_6</dataOutputObjs>
+      <dataOutputObjs>ap_return_7</dataOutputObjs>
+      <dataOutputObjs>ap_return_8</dataOutputObjs>
+    </node_objs>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="i_1_reg_339">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_0_2_s_reg_330">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="coefficients_addr_reg_357">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_0_0_s_reg_294">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_80">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_344">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_68">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="j_1_reg_352">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_1_0_s_reg_324">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_0_1_s_reg_312">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_2_0_s_reg_300">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_1_2_s_reg_306">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_2_2_s_reg_282">
+    <nodeIds>2</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_2_1_s_reg_288">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_val_1_1_s_reg_318">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <expressionNodes realName="kernel_val_1_2_s_fu_36">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_2_0_cast_fu_233">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_2_1_s_fu_24">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_3_fu_171">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_0_1_s_fu_40">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_cast_fu_228">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_7_fu_195">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_4_fu_177">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_fu_98">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_153">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_0_0_s_fu_28">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond1_fu_92">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_2_2_s_fu_20">
+    <nodeIds>2</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_cast_fu_104">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_1_1_s_fu_44">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_fu_213">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_108">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_5_fu_183">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_2_fu_165">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_223">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_2_0_s_fu_32">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond_fu_207">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_1_0_s_fu_48">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_6_fu_189">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="coefficients_addr_gep_fu_56">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_val_0_2_s_fu_52">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_159">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_8_fu_201">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_120">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_72">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_cast_42_fu_219">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_phi_fu_84">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_cast_fu_116">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="kernel_val_2_1_load_load_fu_129">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_62_store_fu_247">
+    <nodeIds>47</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_2_2_load_load_fu_126">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_65_store_fu_252">
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_69_store_fu_262">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_60_store_fu_242">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_72_store_fu_267">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_2_0_load_load_fu_135">
+    <nodeIds>77</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_0_2_load_load_fu_150">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_0_0_load_load_fu_132">
+    <nodeIds>76</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_1_0_load_load_fu_147">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_1_2_load_load_fu_138">
+    <nodeIds>78</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_0_1_load_load_fu_141">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_val_1_1_load_load_fu_144">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_58_store_fu_237">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_67_store_fu_257">
+    <nodeIds>55</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_74_store_fu_272">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_76_store_fu_277">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="coefficients">
+    <nodeIds>35</nodeIds>
+  </memoryPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_4">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_5">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_6">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_7">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_8">
+    <contents name="ret">
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="45"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="47"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="49"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="50"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="53"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="blur_Loop_1_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="25" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>12</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="24" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>18</basicBlocks>
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop 1.1" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="6" mMaxLatency="-1" mType="1">
+      <basicBlocks>30</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <basicBlocks>40</basicBlocks>
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>46</basicBlocks>
+      <basicBlocks>49</basicBlocks>
+      <basicBlocks>51</basicBlocks>
+      <basicBlocks>54</basicBlocks>
+      <basicBlocks>57</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <basicBlocks>62</basicBlocks>
+      <basicBlocks>65</basicBlocks>
+      <basicBlocks>68</basicBlocks>
+      <basicBlocks>71</basicBlocks>
+      <basicBlocks>73</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>93</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

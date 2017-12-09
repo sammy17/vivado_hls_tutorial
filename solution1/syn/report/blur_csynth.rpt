@@ -1,0 +1,263 @@
+
+
+================================================================
+== Vivado HLS Report for 'blur'
+================================================================
+* Date:           Thu Nov 30 23:34:11 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        medium_maxi
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+---------+---------+----------+
+    |  Latency  |      Interval     | Pipeline |
+    | min | max |   min   |   max   |   Type   |
+    +-----+-----+---------+---------+----------+
+    |    1|    1|  2083323|  2091276| dataflow |
+    +-----+-----+---------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+------------------+---------+---------+---------+---------+---------+
+        |                                |                  |      Latency      |      Interval     | Pipeline|
+        |            Instance            |      Module      |   min   |   max   |   min   |   max   |   Type  |
+        +--------------------------------+------------------+---------+---------+---------+---------+---------+
+        |stg_18_blur_Block_proc9_fu_167  |blur_Block_proc9  |        0|        0|        0|        0|   none  |
+        |grp_blur_AXIM2Mat_fu_141        |blur_AXIM2Mat     |        2|  2085482|        2|  2085482|   none  |
+        |grp_blur_Loop_1_proc_fu_161     |blur_Loop_1_proc  |       25|       25|       25|       25|   none  |
+        |grp_blur_Filter2D_fu_124        |blur_Filter2D     |      173|  2091275|      173|  2091275|   none  |
+        |grp_blur_Mat2AXIM_fu_153        |blur_Mat2AXIM     |  2083322|  2083322|  2083322|  2083322|   none  |
+        +--------------------------------+------------------+---------+---------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      1|
+|FIFO             |        0|      -|      85|    404|
+|Instance         |        3|      9|    1749|   1915|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     20|
+|Register         |        -|      -|      18|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      9|    1852|   2340|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      4|       1|      4|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+---------------------+---------+-------+-----+-----+
+    |        Instance       |        Module       | BRAM_18K| DSP48E|  FF | LUT |
+    +-----------------------+---------------------+---------+-------+-----+-----+
+    |blur_AXILiteS_s_axi_U  |blur_AXILiteS_s_axi  |        0|      0|  106|  168|
+    |blur_AXIM2Mat_U0       |blur_AXIM2Mat        |        0|      0|  196|  138|
+    |blur_Block_proc9_U0    |blur_Block_proc9     |        0|      0|    2|    1|
+    |blur_CRTL_BUS_m_axi_U  |blur_CRTL_BUS_m_axi  |        0|      0|  548|  700|
+    |blur_Filter2D_U0       |blur_Filter2D        |        3|      9|  633|  748|
+    |blur_Loop_1_proc_U0    |blur_Loop_1_proc     |        0|      0|   93|   23|
+    |blur_Mat2AXIM_U0       |blur_Mat2AXIM        |        0|      0|  171|  137|
+    +-----------------------+---------------------+---------+-------+-----+-----+
+    |Total                  |                     |        3|      9| 1749| 1915|
+    +-----------------------+---------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------------------+---------+---+----+------+-----+---------+
+    |           Name           | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +--------------------------+---------+---+----+------+-----+---------+
+    |dst_data_stream_0_V_U     |        0|  5|  20|     1|    8|        8|
+    |image_in_channel_U        |        0|  5|  44|     1|   32|       32|
+    |image_out_channel_U       |        0|  5|  44|     3|   32|       96|
+    |kernel_val_0_0_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_0_1_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_0_2_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_1_0_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_1_1_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_1_2_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_2_0_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_2_1_channel_U  |        0|  5|  20|     2|    8|       16|
+    |kernel_val_2_2_channel_U  |        0|  5|  20|     2|    8|       16|
+    |src_cols_V_channel39_U    |        0|  5|  24|     1|   12|       12|
+    |src_cols_V_channel_U      |        0|  5|  24|     1|   12|       12|
+    |src_data_stream_0_V_U     |        0|  5|  20|     1|    8|        8|
+    |src_rows_V_channel38_U    |        0|  5|  24|     1|   12|       12|
+    |src_rows_V_channel_U      |        0|  5|  24|     1|   12|       12|
+    +--------------------------+---------+---+----+------+-----+---------+
+    |Total                     |        0| 85| 404|    28|  200|      336|
+    +--------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |blur_Filter2D_U0_ap_start  |    and   |      0|  0|   1|           1|           1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|   1|           1|           1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |                           Name                          | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_0_0_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_0_1_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_0_2_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_1_0_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_1_1_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_1_2_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_2_0_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_2_1_channel  |   1|          2|    1|          2|
+    |ap_chn_write_blur_Loop_1_proc_U0_kernel_val_2_2_channel  |   1|          2|    1|          2|
+    |ap_sig_ready_blur_AXIM2Mat_U0_ap_ready                   |   1|          2|    1|          2|
+    |ap_sig_ready_blur_Block_proc9_U0_ap_ready                |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_0_0_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_0_1_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_0_2_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_1_0_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_1_1_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_1_2_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_2_0_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_2_1_channel_full_n               |   1|          2|    1|          2|
+    |ap_sig_ready_kernel_val_2_2_channel_full_n               |   1|          2|    1|          2|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                    |  20|         40|   20|         40|
+    +---------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+---+----+-----+-----------+
+    |                    Name                    | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------+---+----+-----+-----------+
+    |ap_CS                                       |  1|   0|    1|          0|
+    |ap_reg_procdone_blur_AXIM2Mat_U0            |  1|   0|    1|          0|
+    |ap_reg_procdone_blur_Block_proc9_U0         |  1|   0|    1|          0|
+    |ap_reg_procdone_blur_Filter2D_U0            |  1|   0|    1|          0|
+    |ap_reg_procdone_blur_Loop_1_proc_U0         |  1|   0|    1|          0|
+    |ap_reg_procdone_blur_Mat2AXIM_U0            |  1|   0|    1|          0|
+    |ap_reg_ready_blur_AXIM2Mat_U0_ap_ready      |  1|   0|    1|          0|
+    |ap_reg_ready_blur_Block_proc9_U0_ap_ready   |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_0_0_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_0_1_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_0_2_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_1_0_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_1_1_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_1_2_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_2_0_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_2_1_channel_full_n  |  1|   0|    1|          0|
+    |ap_reg_ready_kernel_val_2_2_channel_full_n  |  1|   0|    1|          0|
+    |blur_Mat2AXIM_U0_ap_start                   |  1|   0|    1|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+    |Total                                       | 18|   0|   18|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWREADY   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWADDR    |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WVALID    |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WREADY    | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WDATA     |  in |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WSTRB     |  in |    4|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARVALID   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARREADY   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARADDR    |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RVALID    | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RREADY    |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RDATA     | out |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RRESP     | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BVALID    | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BREADY    |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BRESP     | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|ap_clk                   |  in |    1| ap_ctrl_hs |     blur     | return value |
+|ap_rst_n                 |  in |    1| ap_ctrl_hs |     blur     | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs |     blur     | return value |
+|ap_done                  | out |    1| ap_ctrl_hs |     blur     | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs |     blur     | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs |     blur     | return value |
+|m_axi_CRTL_BUS_AWVALID   | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWREADY   |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWADDR    | out |   32|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWID      | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWLEN     | out |    8|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWSIZE    | out |    3|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWBURST   | out |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWLOCK    | out |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWCACHE   | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWPROT    | out |    3|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWQOS     | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWREGION  | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_AWUSER    | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WVALID    | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WREADY    |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WDATA     | out |   32|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WSTRB     | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WLAST     | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WID       | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_WUSER     | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARVALID   | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARREADY   |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARADDR    | out |   32|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARID      | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARLEN     | out |    8|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARSIZE    | out |    3|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARBURST   | out |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARLOCK    | out |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARCACHE   | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARPROT    | out |    3|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARQOS     | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARREGION  | out |    4|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_ARUSER    | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RVALID    |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RREADY    | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RDATA     |  in |   32|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RLAST     |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RID       |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RUSER     |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_RRESP     |  in |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_BVALID    |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_BREADY    | out |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_BRESP     |  in |    2|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_BID       |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
+|m_axi_CRTL_BUS_BUSER     |  in |    1|    m_axi   |   CRTL_BUS   |    pointer   |
++-------------------------+-----+-----+------------+--------------+--------------+
+

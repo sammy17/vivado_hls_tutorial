@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1512065050000">
+  <ports id="1" name="src_rows_V_out" type="PortType" lineNumber="12" originalName="src.rows.V" fileName="medium_maxi/core.cpp" fileDirectory=".." coreName="FIFO" contextFuncName="blur" bitwidth="12" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="12" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="src_cols_V_out" type="PortType" lineNumber="12" originalName="src.cols.V" fileName="medium_maxi/core.cpp" fileDirectory=".." coreName="FIFO" contextFuncName="blur" bitwidth="12" direction="DirOut" iftype="IfTypeRom">
+    <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="12" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="3" name="image_in" type="PortType" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="image_out" type="PortType" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="image_in_out" type="PortType" coreName="FIFO" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="image_out_out" type="PortType" coreName="FIFO" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="27" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="29" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="32" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.4"/>
+  <edges id="33" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.5"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="39" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@ports.0"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.1"/>
+  <blocks id="24" name="blur_Block__proc9" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="image_out_read" bitwidth="32" opcode="read">
+      <dataInputObjs>image_out</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="image_in_read" bitwidth="32" opcode="read">
+      <dataInputObjs>image_in</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="node_14" opcode="write">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>image_in_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="node_16" opcode="write">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>image_out_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="node_21" lineNumber="601" fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="init" opcode="write">
+      <inlineStackInfo fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="581" fileDirectory="/home/chathura/Desktop" functionName="Mat"/>
+      <inlineStackInfo fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="601" fileDirectory="/home/chathura/Desktop" functionName="init"/>
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="12" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataOutputObjs>src_rows_V_out</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="node_22" lineNumber="602" fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="init" opcode="write">
+      <inlineStackInfo fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="581" fileDirectory="/home/chathura/Desktop" functionName="Mat"/>
+      <inlineStackInfo fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="602" fileDirectory="/home/chathura/Desktop" functionName="init"/>
+      <inlineStackInfo fileName="medium_maxi/core.cpp" linenumber="12" fileDirectory="/home/chathura/Desktop" functionName="blur"/>
+      <dataOutputObjs>src_cols_V_out</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="node_23" opcode="ret"/>
+    <fileValidLineNumbers fileName="medium_maxi/core.cpp">
+      <validLinenumbers>12</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/opt/Xilinx/Vivado_HLS/2015.4/common/technology/autopilot/hls/hls_video_core.h">
+      <validLinenumbers>601</validLinenumbers>
+      <validLinenumbers>602</validLinenumbers>
+      <validLinenumbers>581</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="stg_11_write_fu_50">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_16_write_fu_58">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_17_write_fu_66">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="stg_9_write_fu_42">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="image_in_read_read_fu_36">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="image_out_read_read_fu_30">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioPorts name="image_in">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_in_out">
+    <contents name="write">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_out">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="image_out_out">
+    <contents name="write">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_cols_V_out">
+    <contents name="write">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_rows_V_out">
+    <contents name="write">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="blur_Block__proc9" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vivado HLS Report for 'blur_AXIM2Mat'
+================================================================
+* Date:           Thu Nov 30 23:34:10 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        medium_maxi
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+---------+-----+---------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    | min |   max   | min |   max   |   Type  |
+    +-----+---------+-----+---------+---------+
+    |    2|  2085482|    2|  2085482|   none  |
+    +-----+---------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------+----------------+-----+---------+-----+---------+---------+
+        |                          |                |    Latency    |    Interval   | Pipeline|
+        |         Instance         |     Module     | min |   max   | min |   max   |   Type  |
+        +--------------------------+----------------+-----+---------+-----+---------+---------+
+        |grp_blur_Array2Mat_fu_74  |blur_Array2Mat  |    1|  2085481|    1|  2085481|   none  |
+        +--------------------------+----------------+-----+---------+-----+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      1|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     136|    133|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      4|
+|Register         |        -|      -|      60|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     196|    138|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------+---------+-------+-----+-----+
+    |         Instance         |     Module     | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------+----------------+---------+-------+-----+-----+
+    |grp_blur_Array2Mat_fu_74  |blur_Array2Mat  |        0|      0|  136|  133|
+    +--------------------------+----------------+---------+-------+-----+-----+
+    |Total                     |                |        0|      0|  136|  133|
+    +--------------------------+----------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------+----------+-------+---+----+------------+------------+
+    |ap_sig_bdd_123  |    or    |      0|  0|   1|           1|           1|
+    +----------------+----------+-------+---+----+------------+------------+
+    |Total           |          |      0|  0|   1|           1|           1|
+    +----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |   1|          3|    1|          3|
+    |img_data_stream_V_write  |   1|          2|    1|          2|
+    |m_axi_fb_ARVALID         |   1|          2|    1|          2|
+    |m_axi_fb_RREADY          |   1|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |   4|          9|    4|          9|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+----+----+-----+-----------+
+    |                      Name                      | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                       |   2|   0|    2|          0|
+    |ap_done_reg                                     |   1|   0|    1|          0|
+    |grp_blur_Array2Mat_fu_74_ap_start_ap_start_reg  |   1|   0|    1|          0|
+    |image_in_read_reg_88                            |  32|   0|   32|          0|
+    |img_cols_V_read_reg_98                          |  12|   0|   12|          0|
+    |img_rows_V_read_reg_93                          |  12|   0|   12|          0|
+    +------------------------------------------------+----+----+-----+-----------+
+    |Total                                           |  60|   0|   60|          0|
+    +------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_done                   | out |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs |   blur_AXIM2Mat   | return value |
+|m_axi_fb_AWVALID          | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWREADY          |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWADDR           | out |   32|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWID             | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWLEN            | out |   32|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWSIZE           | out |    3|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWBURST          | out |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWLOCK           | out |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWCACHE          | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWPROT           | out |    3|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWQOS            | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWREGION         | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_AWUSER           | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WVALID           | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WREADY           |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WDATA            | out |    8|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WSTRB            | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WLAST            | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WID              | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_WUSER            | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARVALID          | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARREADY          |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARADDR           | out |   32|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARID             | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARLEN            | out |   32|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARSIZE           | out |    3|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARBURST          | out |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARLOCK           | out |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARCACHE          | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARPROT           | out |    3|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARQOS            | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARREGION         | out |    4|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_ARUSER           | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RVALID           |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RREADY           | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RDATA            |  in |    8|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RLAST            |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RID              |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RUSER            |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_RRESP            |  in |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_BVALID           |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_BREADY           | out |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_BRESP            |  in |    2|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_BID              |  in |    1|    m_axi   |         fb        |    pointer   |
+|m_axi_fb_BUSER            |  in |    1|    m_axi   |         fb        |    pointer   |
+|image_in_dout             |  in |   32|   ap_fifo  |      image_in     |    pointer   |
+|image_in_empty_n          |  in |    1|   ap_fifo  |      image_in     |    pointer   |
+|image_in_read             | out |    1|   ap_fifo  |      image_in     |    pointer   |
+|img_rows_V_dout           |  in |   12|   ap_fifo  |     img_rows_V    |    pointer   |
+|img_rows_V_empty_n        |  in |    1|   ap_fifo  |     img_rows_V    |    pointer   |
+|img_rows_V_read           | out |    1|   ap_fifo  |     img_rows_V    |    pointer   |
+|img_cols_V_dout           |  in |   12|   ap_fifo  |     img_cols_V    |    pointer   |
+|img_cols_V_empty_n        |  in |    1|   ap_fifo  |     img_cols_V    |    pointer   |
+|img_cols_V_read           | out |    1|   ap_fifo  |     img_cols_V    |    pointer   |
+|img_data_stream_V_din     | out |    8|   ap_fifo  | img_data_stream_V |    pointer   |
+|img_data_stream_V_full_n  |  in |    1|   ap_fifo  | img_data_stream_V |    pointer   |
+|img_data_stream_V_write   | out |    1|   ap_fifo  | img_data_stream_V |    pointer   |
+|img_rows_V_out_din        | out |   12|   ap_fifo  |   img_rows_V_out  |    pointer   |
+|img_rows_V_out_full_n     |  in |    1|   ap_fifo  |   img_rows_V_out  |    pointer   |
+|img_rows_V_out_write      | out |    1|   ap_fifo  |   img_rows_V_out  |    pointer   |
+|img_cols_V_out_din        | out |   12|   ap_fifo  |   img_cols_V_out  |    pointer   |
+|img_cols_V_out_full_n     |  in |    1|   ap_fifo  |   img_cols_V_out  |    pointer   |
+|img_cols_V_out_write      | out |    1|   ap_fifo  |   img_cols_V_out  |    pointer   |
++--------------------------+-----+-----+------------+-------------------+--------------+
+
