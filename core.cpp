@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 void conv(uint8_t * image_in, uint8_t * image_out){
+#pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
 #pragma HLS INTERFACE m_axi depth=2073600 port=image_out offset=slave bundle=CRTL_BUS
 #pragma HLS INTERFACE m_axi depth=2073600 port=image_in offset=slave bundle=CRTL_BUS
 #pragma HLS DATAFLOW
